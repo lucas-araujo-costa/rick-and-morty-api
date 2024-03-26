@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
 export default function ErrorPage() {
@@ -5,6 +6,7 @@ export default function ErrorPage() {
     <>
       <Header />
       <div className="text-white text-center flex justify-center items-center mt-96">Error: page not found.</div>
+      <Footer />
     </>
   )
 }

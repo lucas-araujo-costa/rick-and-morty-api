@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
 
 export function Characters() {
   const [data, setData] = useState([])
@@ -31,6 +32,7 @@ export function Characters() {
           ))}
         </div>
       </section>
+      <Footer />
     </>
   )
 }

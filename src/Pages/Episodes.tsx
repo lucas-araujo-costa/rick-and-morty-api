@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 export default function Episodes() {
   const [data, setData] = useState([])
@@ -28,6 +29,7 @@ export default function Episodes() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }

@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
           <p className='text-lg'>For more informations, visit the <a href="https://rickandmortyapi.com/" target="_blank"className='underline'>official API website.</a></p>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 
 export default function Locations() {
   const [data, setData] = useState([])
@@ -29,6 +30,7 @@ export default function Locations() {
           ))}
         </div>
       </section>
+      <Footer />
     </>
   )
 }
