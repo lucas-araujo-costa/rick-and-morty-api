@@ -6,11 +6,11 @@ export default function Header() {
         <div>
           <a href={"/"} className="flex items-center gap-2">
             <img src="https://images.yampi.me/assets/stores/rick-and-morty-tabacaria/uploads/icon/64051dffc14d9.png" className="size-10" />
-            <h1 className="text-4xl">Rick and Morty Wiki</h1>
+            <h1 className="text-4xl font-bold">Rick and Morty Wiki</h1>
           </a>
         </div>
         <nav>
-          <ul className="flex gap-6">
+          <ul className="flex gap-16">
             <li className="text-lg"><a href={"/"}>Home</a></li>
             <li className="text-lg"><a href={"/characters"}>Characters</a></li>
             <li className="text-lg"><a href={"/locations"}>Locations</a></li>
