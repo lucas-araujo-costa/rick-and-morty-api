@@ -16,6 +16,7 @@
 ## Project
 
 Rick and Morty API is a Vite Project to training API consumption in ReactJS.
+<a href="https://rick-and-morty-api-k2as-hloukg958.vercel.app" target="_blank">Visit</a>
 
 ## Technologies
 
