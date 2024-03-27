@@ -2,8 +2,19 @@ import { useState, useEffect } from "react"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
+interface CharacterTypes {
+  id: number,
+  image: string,
+  name: string,
+  gender: string,
+  species: string,
+  origin: {
+    name: string
+  }
+}
+
 export function Characters() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<CharacterTypes[]>([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
