@@ -2,8 +2,16 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
+interface LocationsTypes {
+  name: string,
+  id: number,
+  type: string,
+  species: string,
+}
+
+
 export default function Locations() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<LocationsTypes[]>([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
