@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
+interface EpisodesTypes {
+  id: number,
+  name: string,
+  episode: string,
+  air_date: string,
+}
+
 export default function Episodes() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<EpisodesTypes[]>([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
