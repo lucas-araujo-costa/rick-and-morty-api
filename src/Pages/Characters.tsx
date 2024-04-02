@@ -16,12 +16,14 @@ interface CharacterTypes {
 export function Characters() {
   const [data, setData] = useState<CharacterTypes[]>([])
   const [search, setSearch] = useState('')
+  const [isFetching, setIsFetching] = useState(true)
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character')
       .then((response) => response.json())
       .then((data) => setData(data.results))
       .catch((error) => console.log('error', error))
+      .finally(() => setIsFetching(false))
   }, [])
 
   return (
@@ -32,6 +34,7 @@ export function Characters() {
           <input type="text" placeholder="Search character..." className="w-80 px-2 py-1 rounded-md font-medium text-lg" onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="flex flex-row flex-wrap justify-around gap-8 py-8 ">
+          {isFetching && <p className="text-white text-center">Carregando...</p>}
           {data.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())).map((item) => (
             <div key={item.id} className="flex flex-col gap-y-1 cursor-pointer hover:scale-110 hover:duration-100">
               <img src={item.image} className="rounded-lg" />
